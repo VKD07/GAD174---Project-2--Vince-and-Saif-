@@ -5,13 +5,17 @@ using UnityEngine.UI;
 
 public class VolumeSlider : MonoBehaviour
 {
-    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioSource audioPlayer;
+    [SerializeField] AudioSource PortalMusic;
+    [SerializeField] AudioSource QuestSound;
     Slider slider;
 
     void Start()
     {
         slider = GetComponent<Slider>();
-        audioSource.volume = slider.value;
+        audioPlayer.volume = slider.value;
+        PortalMusic.volume = slider.value;
+        QuestSound.volume = slider.value;
     }
 
     // Update is called once per frame
@@ -22,6 +26,8 @@ public class VolumeSlider : MonoBehaviour
 
     public void VolumeSound()
     {
-        audioSource.volume = slider.value;
+        audioPlayer.volume = slider.value;
+        PortalMusic.volume = slider.value;
+        QuestSound.volume = slider.value;
     }
 }
