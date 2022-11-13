@@ -8057,6 +8057,10 @@ PrefabInstance:
       value: Portal v2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 03117d3ba45b0d64a8c7f73eb6451b1c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 03117d3ba45b0d64a8c7f73eb6451b1c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
