@@ -7175,7 +7175,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioPlayer: {fileID: 833527323}
-  PortalMusic: {fileID: 0}
+  PortalMusic:
+  - {fileID: 833527323}
+  - {fileID: 1655928192}
+  - {fileID: 1353793135}
+  - {fileID: 181318381}
   QuestSound: {fileID: 181318381}
 --- !u!1001 &1534044532
 PrefabInstance:
@@ -7356,6 +7360,7 @@ MonoBehaviour:
   - {fileID: 833527323}
   - {fileID: 1655928192}
   - {fileID: 1353793135}
+  - {fileID: 181318381}
 --- !u!1001 &1569518820
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -15,18 +15,22 @@ public class MusicSelector : MonoBehaviour
             musicList[0].Stop();
             musicList[1].Play();
             musicList[2].Stop();
+            musicList[3].Stop();
+
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             musicList[0].Stop();
             musicList[1].Stop();
             musicList[2].Play();
+            musicList[3].Stop();
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            musicList[0].Stop();
+            musicList[0].Play();
             musicList[1].Stop();
-            musicList[2].Play();
+            musicList[2].Stop();
+            musicList[3].Stop();
         }
     }
 }
