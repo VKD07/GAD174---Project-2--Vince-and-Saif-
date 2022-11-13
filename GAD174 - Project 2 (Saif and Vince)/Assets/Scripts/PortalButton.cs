@@ -6,16 +6,31 @@ public class PortalButton : MonoBehaviour
 {
     [SerializeField] Material portalMaterial;
 
+    [SerializeField] Renderer portalEffect;
+
+    [SerializeField] Material[] PortalColors;
+    int PortalCount = 0;
+
+    [SerializeField] AudioSource portalAudioSource;
+    [SerializeField] AudioClip [] PortalMusic;
+    [SerializeField] AudioClip PortalChangeSound;
+   
+
+   
+
     void Start()
     {
-        
+        portalEffect.enabled = true;
+        portalEffect.sharedMaterial = PortalColors[PortalCount];
+       
+       
    
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
     public void PortalHighlight()
@@ -28,6 +43,25 @@ public class PortalButton : MonoBehaviour
      
     }
 
+    public void PortalColorEffect()
+    {
+        portalAudioSource.PlayOneShot(PortalChangeSound);
+    
+        if(PortalCount != 2)
+        {
+            PortalCount++;
+        }
+        else
+        {
+            PortalCount = 0;
+        }
 
+        portalEffect.sharedMaterial = PortalColors[PortalCount];
+
+        portalAudioSource.clip = PortalMusic[PortalCount];
+        portalAudioSource.Play();
+
+        
+    }
     
 }
